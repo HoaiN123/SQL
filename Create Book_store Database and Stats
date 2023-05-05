@@ -1,0 +1,24 @@
+--Create a book_store database
+
+CREATE TABLE Book_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, rating INTEGER);
+
+INSERT INTO Book_store VALUES (1,"The Alchemist", 20, 18.95, 4.5);
+INSERT INTO Book_store VALUES (2,"The Mins of the Leader", 40, 24.99, 5);
+INSERT INTO Book_store VALUES (3,"Atomic Habit", 15, 13.49, 3);
+INSERT INTO Book_store VALUES (4,"It Starts with Us", 10, 33.64, 4.5);
+INSERT INTO Book_store VALUES (5,"The Silent Patient", 15,17.99, 4.5);
+INSERT INTO Book_store VALUES (6,"A Court of Thorns and Roses", 5,28.90,5);
+INSERT INTO Book_store VALUES (7,"The Psychology og Money", 4, 14.99, 3);
+INSERT INTO Book_store VALUES (8,"How to Talk to Anyone", 10, 14.74,3.5);
+INSERT INTO Book_store VALUES (9,"Think and Grow Rich", 7, 8.19, 4);
+INSERT INTO Book_store VALUES (10,"Maybe in Another Life", 10, 10.99, 5);
+INSERT INTO Book_store VALUES (11,"Lessons in Chemistry", 5, 41.86, 5);
+INSERT INTO Book_store VALUES (12,"The House in the Pines", 4, 39.25,5);
+INSERT INTO Book_store VALUES (13,"They Both Die at the End", 10, 14.49,3.5);
+INSERT INTO Book_store VALUES( 14,"Dark Psychology", 20, 23.28, 4.5);
+INSERT INTO Book_store VALUES (15,"The Power of Habit", 10, 9.98, 4);
+
+--What is the database look like?
+SELECT * FROM Book_store; 
+
+SELECT  name, price, rating FROM Book_store ORDER BY price asc
