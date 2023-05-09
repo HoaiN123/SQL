@@ -1,0 +1,22 @@
+CREATE TABLE BIT_DB.Spotifydata (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    artist_name VARCHAR NOT NULL, 
+    track_name VARCHAR NOT NULL, 
+    track_id VARCHAR NOT NULL, 
+    popularity INTEGER NOT NULL, 
+    danceability DECIMAL(4,3) NOT NULL, 
+    energy DECIMAL(4,3) NOT NULL,
+    key INTEGER NOT NULL,
+    loudness DECIMAL(5,3) NOT NULL,
+    mode INTEGER NOT NULL,
+    speechiness DECIMAL(5,4) NOT NULL,
+    acousticness DECIMAL(6,5) NOT NULL,
+    instrumentalness decimal(8,7) NOT NULL,
+    liveness decimal(5,4) NOT NULL,
+    valence decimal(4,3) NOT NULL,
+    tempo decimal(6,3) NOT NULL,
+    duration_ms integer NOT NULL,
+    time_signature integer NOT NULL )
+SELECT artist_name, track_name, AVG(popularity), AVG(danceability)
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name
