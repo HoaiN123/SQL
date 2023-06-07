@@ -1,0 +1,30 @@
+# Create calculate_insurance_cost() function below: 
+def calculate_insurance_cost(name, age,sex, bmi, num_of_children, smoker):
+  estimated_cost = 250*age - 128*sex + 370*bmi + 425*num_of_children + 24000*smoker - 12500
+  print("The estimated insurance cost for " + name + " is " + str(estimated_cost) + " dollars") 
+  return estimated_cost
+
+# Estimate Maria's insurance cost
+maria_insurance_cost = calculate_insurance_cost("Maria", 28, 0, 26.2, 3, 0)
+maria_message = "Hi Maria"
+print(maria_message)
+
+# Estimate Omar's insurance cost 
+Omar_insurance_cost = calculate_insurance_cost("Omar", 30, 1, 22.2, 0, 1)
+Omar_message = "Hi Omar"
+print(Omar_message)
+
+# Estimate Hoai's insurance cost
+Hoai_insurance_cost = calculate_insurance_cost("Hoai", 26, 0, 26.2, 0, 0)
+Hoai_message = "Hi Hoai"
+print(Hoai_message) 
+
+def difference_insurance_cost(name1, cost1, name2, cost2):
+    difference_cost = cost1 - cost2
+    print("The difference in insurance cost between " + name1 + " and " + name2 + " is " + str(abs(difference_cost)) + " dollars")
+
+# Calculate the difference in insurance costs between Maria and Omar
+a = difference_insurance_cost("Maria", maria_insurance_cost, "Omar", Omar_insurance_cost)
+
+# Calculate the difference in insurance costs between Maria and Hoai
+b = difference_insurance_cost("Maria", maria_insurance_cost, "Hoai", Hoai_insurance_cost)
