@@ -76,3 +76,12 @@ estimated_insurance_data.append(("Valentina", valentina_insurance_cost))
 print("Here is the estimated insurance cost data: " 
 + str(estimated_insurance_data))
 
+
+# Calculate difference_cost of individual
+insurance_cost_difference = []
+for i in range(len(names)):
+  different = insurance_costs[i] - estimated_insurance_data[i][1]
+  insurance_cost_difference.append(different)
+insurance_cost_difference_data = list(zip(names, insurance_cost_difference))
+print(insurance_cost_difference_data)
+
